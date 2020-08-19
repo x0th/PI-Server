@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	link(rel='stylesheet', href='/stylesheets/chat.css')
+
+	div(id='usernameContainer')
+		form(id='usernameForm', onsubmit='sendUsername();')
+			input(type='text', placeholder='Username', id='submitUsername')
+			button(type='submit') Submit
+
+	div(id='chat-main')
+		div(id='usersContainer')
+			form(id='findUser', onsubmit='findUsername();')
+				input(type='text', placeholder='Find user...', id='userToFind')
+			form(id='usersForm', onsubmit='spawnChat(this.submitted);')
+
+		div(id='chatContainer')
+			div(id='messageContainer')
+			div(id='messageBox')
+				textarea(id='message')
+				button(onclick='sendMessage();') Send
+
+
+	script(src='/socket.io/socket.io.js')
+	script(src='/scripts/chat_user.js')

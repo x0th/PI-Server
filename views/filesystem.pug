@@ -1,0 +1,36 @@
+extends layout
+
+block content
+	form(action='/hidden/admin/system', method='POST')
+		input(type='text', id='create_new', placeholder='Create', name='create_name')
+		label(for='is_folder') Folder?
+		input(type='checkbox', id='is_folder', name='is_folder')
+		button(type='submit') Submit
+	form(action='/hidden/admin/system', method='POST')
+		input(type='text', id='delete', placeholder='Delete', name='delete_name')
+		lable(for='is_folder') Folder?
+		input(type='checkbox', id='is_folder', name='is_folder')
+		button(type='submit') Submit
+	form(action='/hidden/admin/system', method='POST')
+		input(type='text', id='search_file', placeholder='Search', name='search_name')
+		button(type='submit') Submit
+		br
+
+	p Path: #{path}
+
+	form(action='/hidden/admin/system', method='post')
+		button(class='folder', type='submit', name='change_dir', value='..') ..
+		if folders
+			each val in folders
+				button(class='folder', type='submit', name='change_dir', value=val.name)= val.name
+
+	form(action='/hidden/admin/system', method='post')
+		if files
+			each val in files
+				button(class='file', type='submit', name='open_file', value=val.name)= val.name
+		else
+			p This folder is empty.
+
+	script.
+		files = #{files}
+		folders = #{folders}

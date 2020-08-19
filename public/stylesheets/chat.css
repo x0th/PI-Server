@@ -1,0 +1,63 @@
+#chat-main {
+	border: 1px solid #000;
+	display: flex;
+	justify-content: center;
+	min-height: 400px;
+	max-height: 800px;
+	height: 400px;
+	overflow: hidden;
+}
+
+#usersContainer {
+	border: 1px solid #000;
+	width: 15%;
+	display: flex;
+	flex-flow: column;
+	flex-wrap: nowrap;
+	overflow-y: auto;
+}
+
+#findUser input {
+	width: 95%;
+}
+
+.userButton {
+	display: block;
+	width: 100%;
+}
+
+#chatContainer {
+	border: 1px solid #000;
+	width: 85%;
+}
+
+#messageContainer {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-flow: column;
+	flex-wrap: nowrap;
+	overflow-y: auto;
+}
+
+#messageContainer div {
+	white-space: pre;
+}
+
+#messageBox {
+	height: 20%;
+	width: 100%;
+	display: flex;
+}
+
+#messageBox textarea {
+	width: 90%;
+	height: 90%;
+	resize: none;
+}
+
+#messageBox button {
+	width: 10%;
+	height: 100%;
+	margin-bottom: 40px;
+}

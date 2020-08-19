@@ -1,0 +1,12 @@
+﻿#editor-container {
+    height: 375px;
+}
+
+#save-button {
+    font-weight: bold;
+}
+
+#back-button {
+    font-weight: bold;
+    padding-left: 20px;
+}

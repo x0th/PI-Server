@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 Login
+	if (messages.error)
+		messages.error
+	form(action='/hidden/login', method='post')
+		input(type='text', placeholder='Username', id='name', name='name', required)
+		input(type='text', placeholder='Password', id='password', name='password', required)
+		button(type='submit') Login

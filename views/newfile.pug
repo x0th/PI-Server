@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    form(action='/hidden/admin/newfile', method='post', enctype='multipart/form-data')
+        input(type='file', name='uploadFile')
+        input(type='submit')
+
+    p OR
+
+    form(action='/hidden/admin/editor', method='post')
+        input(type='hidden', id='hidden_input', name='isNew', value='true')
+        button(type='submit') Open empty file in editor

@@ -1,0 +1,38 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+button.file {
+    padding-bottom: 2px;
+    background: transparent;
+    border: none !important;
+    display: block;
+}
+
+button.file:before {
+    content: '';
+    background: url(https://img.icons8.com/metro/14/000000/file.png);
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+button.folder {
+    padding-bottom: 2px;
+    background: transparent;
+    border: none !important;
+    display: block;
+}
+
+button.folder:before {
+	content: '';
+	background: url(https://img.icons8.com/metro/14/000000/folder-invoices.png);
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	padding-right: 15px;
+}
